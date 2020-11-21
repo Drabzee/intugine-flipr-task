@@ -4,8 +4,21 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 520px) {
+  body, html {
+    min-width: 14px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  body, html {
+    min-width: 16px;
+  }
 }
