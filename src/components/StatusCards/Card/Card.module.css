@@ -1,0 +1,23 @@
+.card {
+  width: 90px;
+  height: 85px;
+  background-color: #d5dfff;
+  border-radius: 5px;
+  padding: 7px 7px 3px 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #2f5bff;
+  cursor: pointer;
+}
+
+.card h1 {
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.card.active {
+  background-color: #2f5bff;
+  color: #ffffff;
+}
