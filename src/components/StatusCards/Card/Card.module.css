@@ -11,8 +11,13 @@
   cursor: pointer;
 }
 
+.card h4 {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
 .card h1 {
-  font-weight: 400;
+  font-weight: 100;
   font-size: 3rem;
   text-align: center;
 }
