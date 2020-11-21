@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../assets/logo.svg';
 import profile from '../../assets/profile.svg';
+import Avatar from '../Avatar/Avatar';
 import style from './Navbar.module.css';
 
 const Navbar = () => {
@@ -16,7 +17,7 @@ const Navbar = () => {
         <li>Transporters</li>
       </ul>
       <div className={style.dropdown}>
-        <span className={style.profile}><img src={profile} width={20} alt="profile" /></span>
+        <Avatar bgColor="#c0c2ca" width="20" img={profile} alt="profile" margin="45% 50%" />
         <span className={style.icon}><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
       </div>
     </div>

@@ -1,0 +1,11 @@
+.avatar {
+  width: 35px;
+  height: 35px;
+  display: block;
+  border-radius: 50%;
+}
+
+.avatar img {
+  margin: 45% 50%;
+  transform: translate(-50%, -50%);
+}

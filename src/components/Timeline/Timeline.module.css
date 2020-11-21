@@ -10,11 +10,15 @@
   background-size: 1.5px 17px;
   background-repeat: repeat-y;
   padding-left: 10px;
+  margin-left: 15.5px;
 }
 
 .timelineRow {
   display: flex;
   align-items: center;
+}
+
+.timelineRow:not(:first-child) {
   margin-top: 20px;
 }
 
@@ -69,17 +73,4 @@
 
 .tiles p:last-child {
   margin-left: 25px;
-}
-
-.avatar {
-  background-color: #c1c3cb;
-  width: 35px;
-  height: 35px;
-  display: block;
-  border-radius: 50%;
-}
-
-.avatar img {
-  margin: 45% 50%;
-  transform: translate(-50%, -50%);
 }
