@@ -4,6 +4,7 @@ import DataTable from '../../components/DataTable/DataTable';
 import StatusCards from '../../components/StatusCards/StatusCards';
 import style from './Home.module.css';
 import Layout from '../../components/Layout/Layout';
+import Loader from '../../components/Loader/Loader';
 
 const Home = () => {
 
@@ -41,7 +42,7 @@ const Home = () => {
           <StatusCards filter={filter} setFilter={setFilter} />
           <DataTable shipmentData={shipmentData} status={filter.status} />
         </Fragment>
-      ) : error ? <div className={style.error}>{error}</div> : <div /> }
+      ) : error ? <div className={style.error}>{error}</div> : <Loader /> }
     </Layout>
   );
 }
