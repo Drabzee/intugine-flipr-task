@@ -60,6 +60,7 @@
   border: 1px solid #e5ebff;
   padding: 13px 80px 13px 17px;
   flex: 1;
+  align-items: center;
   color: #7b808e;
 }
 

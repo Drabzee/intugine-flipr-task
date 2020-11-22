@@ -5,13 +5,13 @@ import destination from '../../../assets/destination.svg';
 import Avatar from '../../Avatar/Avatar';
 import { formatDate, formatTime } from '../../../utils/dateTime';
 
-const Timeline = ({selectedDelivery}) => {
+const Timeline = ({timeline}) => {
 
-  return selectedDelivery ? (
+  return timeline ? (
     <div className={style.timeline}>
       <Avatar bgColor="#d5dfff" width="16" img={destination} alt="destination" margin="50% 57%" />
         <div className={style.container}>
-          { selectedDelivery.scan.map(data =>
+          { timeline.map(data =>
             <div key={`${data.location}-${data.time}`} className={style.timelineRow}>
               <span className={style.dash} />
               <div className={style.tiles}>
@@ -24,7 +24,7 @@ const Timeline = ({selectedDelivery}) => {
         </div>
       <Avatar bgColor="#d5dfff" width="16" img={warehouse} alt="warehouse" margin="47% 50%" />
     </div>
-  ) : <div />
+  ) : <div className={style.emptyBlock} />
 }
 
 export default Timeline

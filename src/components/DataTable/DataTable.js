@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Timeline from './Timeline/Timeline';
 import style from './DataTable.module.css';
 import {formatDate} from '../../utils/dateTime';
@@ -7,11 +7,15 @@ const DataTable = ({shipmentData, status}) => {
 
   const dataArray = shipmentData.filter(data => data.current_status_code === status);
   const [selectedDelivery, setSelectedDelivery] = useState(dataArray[0]);
-  console.log(selectedDelivery);
+  
+  useEffect(() => {
+    setSelectedDelivery(dataArray[0]);
+    // eslint-disable-next-line
+  }, [status]);
 
-  return dataArray.length ? (
+  return dataArray.length && selectedDelivery ? (
     <div className={style.dataTable}>
-      <Timeline selectedDelivery={selectedDelivery} />
+      <Timeline timeline={selectedDelivery.scan} />
       <div className={style.container}>
         <div className={style.innerContainer}>
           <table cellPadding="0" cellSpacing="0">
