@@ -18,7 +18,7 @@ const Navbar = () => {
       </ul>
       <div className={style.dropdown}>
         <Avatar bgColor="#c0c2ca" width="20" img={profile} alt="profile" margin="45% 50%" />
-        <span className={style.icon}><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+        <span className={style.icon}><i className="fa fa-chevron-down" aria-hidden="true"></i></span>
       </div>
     </div>
   )

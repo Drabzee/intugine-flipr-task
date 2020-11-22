@@ -1,4 +1,5 @@
 import React from 'react';
+import DataTable from '../../components/DataTable/DataTable';
 import Navbar from '../../components/Navbar/Navbar';
 import StatusCards from '../../components/StatusCards/StatusCards';
 import Timeline from '../../components/Timeline/Timeline';
@@ -11,6 +12,7 @@ const Home = () => {
       <StatusCards />
       <div className={style.container}>
         <Timeline />
+        <DataTable />
       </div>
     </div>
   )
