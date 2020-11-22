@@ -3,7 +3,6 @@ import axios from 'axios';
 import DataTable from '../../components/DataTable/DataTable';
 import Navbar from '../../components/Navbar/Navbar';
 import StatusCards from '../../components/StatusCards/StatusCards';
-import Timeline from '../../components/Timeline/Timeline';
 import style from './Home.module.css';
 
 const Home = () => {
@@ -35,16 +34,15 @@ const Home = () => {
       });
   }, [shipmentData]);
 
-  return shipmentData.length ? (
+  return shipmentData.length && filter.status ? (
     <div className="home">
       <Navbar />
       <StatusCards filter={filter} setFilter={setFilter} />
       <div className={style.container}>
-        <Timeline />
         <DataTable shipmentData={shipmentData} status={filter.status} />
       </div>
     </div>
-  ) : error ? <p>Error : {error}</p> : <div />
+  ) : error ? <p>{error}</p> : <div />
 }
 
 export default Home;
