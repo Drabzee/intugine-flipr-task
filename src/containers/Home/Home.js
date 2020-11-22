@@ -29,17 +29,16 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    if(shipmentData.length)
-      setFilter({
-        status: 'DEL'
-      });
+    if(shipmentData.length) {
+      setFilter({ status: 'DEL' });
+    }
   }, [shipmentData]);
 
   return (
     <Layout>
       { shipmentData.length && filter.status ? (
         <Fragment>
-          <StatusCards filter={filter} setFilter={setFilter} />
+          <StatusCards shipmentData={shipmentData} filter={filter} setFilter={setFilter} />
           <DataTable shipmentData={shipmentData} status={filter.status} />
         </Fragment>
       ) : error ? <div className={style.error}>{error}</div> : <Loader /> }
